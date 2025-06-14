@@ -1,0 +1,31 @@
+.shiny-text {
+    position: relative;
+    display: inline-block;
+    color: hsl(var(--highlight-blue));
+}
+
+.dark .shiny-text {
+    background: linear-gradient(
+        90deg,
+        #4a9eff 0%,
+        #4a9eff 45%,
+        #ffffff 50%,
+        #4a9eff 55%,
+        #4a9eff 100%
+    );
+    background-size: 200% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: -100% 0;
+    }
+} 
